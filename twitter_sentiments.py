@@ -21,7 +21,7 @@ def tweets_plot(s,i):
     lx = []
     ly =[]
     for tweet in public_tweets:
-    #print(tweet.text)
+        print(tweet.text)
         analysis = TextBlob(tweet.text)
         lx.append(analysis.sentiment[0])
         ly.append(analysis.sentiment[1])
@@ -33,7 +33,7 @@ def tweets_plot(s,i):
     plt.axvline(x=0,linewidth=0.4, color='r')
     plt.ylabel('subjectivity')
 
-people = ['Modi','Trump','Kejriwal','Obama']
+people = ['Bitcoin','Stellar','Ripple','Ethereum']
 i = 1
 for s in people:
     tweets_plot(s,str(i))
